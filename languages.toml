@@ -1,0 +1,13 @@
+use-grammers = { only = [ "python", "c", "cpp", "java", "yaml", "json" ]}
+
+[[language]]
+name = "python"
+language-server = { command = "pylsp" }
+
+[[language]]
+name = "go"
+language-server = { command = "gopls" }
+
+[[language]]
+name = "java"
+language-server = { command = "jdtls", args = ["-data", "~/.cache/workspace"] }
