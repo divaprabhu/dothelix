@@ -1,0 +1,44 @@
+theme = "dracula_at_night"
+
+[editor]
+scrolloff = 2
+line-number = "absolute"
+cursorline = true
+gutters = ["diagnostics", "spacer", "line-numbers", "diff"]
+auto-format = false
+idle-timeout = 250
+completion-trigger-len = 1
+true-color = true
+color-modes = true
+
+[editor.statusline]
+left = ["mode", "spinner", "file-name"]
+center = ["diagnostics", "workspace-diagnostics", ]
+right = ["selections", "position", "separator", "position-percentage", "file-encoding", "file-line-ending", "file-type"]
+separator = "|"
+
+[editor.whitespace.render]
+space = "none"
+tab = "all"
+newline = "none"
+
+[editor.indent-guides]
+render = true
+
+[keys.normal]
+A-h = "jump_view_left"
+A-j = "jump_view_down"
+A-k = "jump_view_up"
+A-l = "jump_view_right"
+
+[keys.insert]
+A-h = "jump_view_left"
+A-j = "jump_view_down"
+A-k = "jump_view_up"
+A-l = "jump_view_right"
+
+[keys.select]
+A-h = "jump_view_left"
+A-j = "jump_view_down"
+A-k = "jump_view_up"
+A-l = "jump_view_right"
