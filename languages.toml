@@ -2,7 +2,9 @@ use-grammers = { only = [ "python", "c", "cpp", "java", "yaml", "json" ]}
 
 [[language]]
 name = "python"
-language-server = { command = "pylsp" }
+roots = ["setup.py", "setup.cfg", "pyproject.toml"]
+language-server = { command = "pyright-langserver", args = ["--stdio"] }
+config = {}
 
 [[language]]
 name = "go"
