@@ -1,4 +1,4 @@
-use-grammers = { only = [ "python", "c", "cpp", "java", "yaml", "json" ]}
+use-grammers = { only = [ "bash", "python", "c", "cpp", "java", "yaml", "json" ]}
 
 [[language]]
 name = "python"
