@@ -2,14 +2,4 @@ use-grammers = { only = [ "bash", "python", "c", "cpp", "java", "yaml", "json" ]
 
 [[language]]
 name = "python"
-roots = ["setup.py", "setup.cfg", "pyproject.toml"]
-language-server = { command = "pyright-langserver", args = ["--stdio"] }
-config = {}
-
-[[language]]
-name = "go"
-language-server = { command = "gopls" }
-
-[[language]]
-name = "java"
-language-server = { command = "jdtls", args = ["-data", "~/.cache/workspace"] }
+language-servers = [ "pyright" ]
