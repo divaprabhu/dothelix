@@ -1,5 +1,14 @@
 use-grammers = { only = [ "bash", "python", "c", "cpp", "java", "yaml", "json" ]}
 
+[language-server.vscode-json-languageserver]
+command = "vscode-json-languageserver"
+args = ["--stdio"]
+config = { provideFormatter = true, json = { validate = { enable = true } } }
+
 [[language]]
 name = "python"
 language-servers = [ "pyright" ]
+
+[[language]]
+name = "json"
+language-servers = [ "vscode-json-languageserver" ]
