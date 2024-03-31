@@ -1,14 +1,15 @@
-use-grammers = { only = [ "bash", "python", "c", "cpp", "java", "yaml", "json" ]}
+# node_setup() {
+#    mkdir -p ~/tmp/node
+#    npm install --prefix ~/tmp/node bash-language-server
+#    npm install --prefix ~/tmp/node pyright
+# -  npm install --prefix ~/tmp/node vscode-json-languageserver 
+# +  npm install --prefix ~/tmp/node vscode-langservers-extracted
+#    npm install --prefix ~/tmp/node yaml-language-server 
+#    ln -sf ~/tmp/node/node_modules/.bin ~/tmp/node/node_modules/bin
+#  }
 
-[language-server.vscode-json-languageserver]
-command = "vscode-json-languageserver"
-args = ["--stdio"]
-config = { provideFormatter = true, json = { validate = { enable = true } } }
+use-grammers = { only = [ "bash", "python", "c", "cpp", "java", "yaml", "json" ]}
 
 [[language]]
 name = "python"
 language-servers = [ "pyright" ]
-
-[[language]]
-name = "json"
-language-servers = [ "vscode-json-languageserver" ]
