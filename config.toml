@@ -2,32 +2,38 @@ theme = "dracula_at_night"
 
 [editor]
 scrolloff = 2
-mouse = false
+mouse = true
 middle-click-paste = false
 scroll-lines = 3
-shell = ["sh", "-c"]
+# shell = ["sh", "-c"]
 line-number = "absolute"
 cursorline = true
 cursorcolumn = false
-gutters = ["diagnostics", "spacer", "line-numbers", "spacer", "diff"]
+# gutters = ["diagnostics", "spacer", "line-numbers", "spacer", "diff"]
 auto-completion = true
 auto-format = false
-auto-save = false
 idle-timeout = 250
+completion-timeout = 250
+preview-completion-insert = true
 completion-trigger-len = 1
-# completion-replace = false
+completion-replace = false
 auto-info = true
-true-color = true
-# undercurl=false
+true-color = false
+undercurl=false
 rulers = [80]
 bufferline = "never"
 color-modes = true
-# text-width = 80
-# workspace-lsp-roots = []
+text-width = 80
+workspace-lsp-roots = []
+default-line-ending = "native"
+insert-final-newline = true
+popup-border = "none"
+indent-heuristic = "hybrid"
+jump-label-alphabet = "abcdefghijklmnopqrstuvwxyz"
 
 [editor.statusline]
 # left = ["mode", "file-name", "file-modification-indicator", "file-encoding", "file-line-ending", "file-type", "version-control"]
-left = ["mode", "file-name", "file-encoding", "file-line-ending", "file-type"]
+left = ["mode", "spacer", "version-control", "file-name", "file-encoding", "file-line-ending", "file-type", "read-only-indicator", "file-modification-indicator"]
 center = ["spinner", "diagnostics", "workspace-diagnostics", ]
 right = ["selections", "primary-selection-length", "separator", "position", "total-line-numbers", "separator", "position-percentage" ]
 separator = "|"
@@ -36,13 +42,13 @@ mode.insert = "INS"
 mode.select = "SEL"
 
 [editor.lsp]
-# enable = true
+enable = true
 display-messages = true
 auto-signature-help = true
-# display-inlay-hints = true
+display-inlay-hints = true
 display-signature-help-docs = true
-# snippets = true
-# goto-reference-include-declaration = true
+snippets = true
+goto-reference-include-declaration = true
 
 [editor.cursor-shape]
 normal = "block"
@@ -52,7 +58,7 @@ select = "block"
 [editor.file-picker]
 hidden = false
 follow-symlinks = true
-# deduplicate-links = true
+deduplicate-links = true
 parents = true
 ignore = true
 git-ignore = true
@@ -69,6 +75,11 @@ git-exclude = true
 '<' = '>'
 "'" = "'"
 
+[editor.auto-save]
+focus-lost = false
+after-delay.enable = false
+after-delay.timeout = 3000
+
 [editor.search]
 smart-case = true
 wrap-around = true
@@ -81,21 +92,33 @@ newline = "none"
 [editor.whitespace.characters]
 space = "·"
 nbsp = "⍽"
+nnbsp = "␣"
 tab = "→"
 newline = "⏎"
-tabpad = "·" # Tabs will look like "→···" (depending on tab width)
+tabpad = "·" # Tabs will look like "→···" (depending on tab width)space = "·"
 
 [editor.indent-guides]
 render = true
-character = "│"
+character = "╎" # Some characters that work well: "▏", "┆", "┊", "⸽"
 skip-levels = 1
 
-# [editor.soft-wrap]
-# enable = true
-# max-wrap = 20
-# max-indent-retain = 40
-# wrap-indicator = '↪'
-# wrap-at-text-width = false
+[editor.gutters]
+layout = ["diff", "diagnostics", "line-numbers", "spacer"]
+
+[editor.gutters.line-numbers]
+min-width = 3
+
+[editor.soft-wrap]
+enable = false
+max-wrap = 20
+max-indent-retain = 40
+wrap-indicator = '↪'
+wrap-at-text-width = false
+
+[editor.smart-tab]
+enable = true
+supersede-menu = false
+
 
 [keys.normal]
 A-h = "jump_view_left"

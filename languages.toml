@@ -9,7 +9,3 @@
 #  }
 
 use-grammers = { only = [ "bash", "python", "c", "cpp", "java", "yaml", "json" ]}
-
-[[language]]
-name = "python"
-language-servers = [ "pyright" ]
