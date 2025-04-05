@@ -9,3 +9,11 @@
 #  }
 
 use-grammers = { only = [ "bash", "python", "c", "cpp", "java", "yaml", "json" ]}
+
+[[language]]
+name = "python"
+formatter = { command = "black" }
+auto-format = true
+
+[language-server.pylsp.config.pylsp]
+plugins.black.enabled = true
