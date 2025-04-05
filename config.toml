@@ -11,6 +11,7 @@ cursorline = true
 cursorcolumn = false
 # gutters = ["diagnostics", "spacer", "line-numbers", "spacer", "diff"]
 auto-completion = true
+path-completion = true
 auto-format = false
 idle-timeout = 250
 completion-timeout = 250
@@ -30,6 +31,7 @@ insert-final-newline = true
 popup-border = "none"
 indent-heuristic = "hybrid"
 jump-label-alphabet = "abcdefghijklmnopqrstuvwxyz"
+end-of-line-diagnostics = "hint"
 
 [editor.statusline]
 # left = ["mode", "file-name", "file-modification-indicator", "file-encoding", "file-line-ending", "file-type", "version-control"]
@@ -44,6 +46,7 @@ mode.select = "SEL"
 [editor.lsp]
 enable = true
 display-messages = true
+display-progress-messages = true
 auto-signature-help = true
 display-inlay-hints = true
 display-signature-help-docs = true
@@ -86,7 +89,7 @@ wrap-around = true
 
 [editor.whitespace.render]
 space = "none"
-tab = "all"
+tab = "none"
 newline = "none"
 
 [editor.whitespace.characters]
@@ -119,6 +122,12 @@ wrap-at-text-width = false
 enable = true
 supersede-menu = false
 
+[editor.inline-diagnostics]
+cursor-line = "warning"
+other-lines = "error"
+prefix-len = 1
+max-wrap = 20
+max-diagnostics = 10
 
 [keys.normal]
 A-h = "jump_view_left"
@@ -138,3 +147,6 @@ A-h = "jump_view_left"
 A-j = "jump_view_down"
 A-k = "jump_view_up"
 A-l = "jump_view_right"
+
+[keys.normal.z]
+a = ":character-info"
